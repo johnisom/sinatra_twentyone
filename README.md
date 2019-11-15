@@ -1,6 +1,6 @@
 # sinatra_twentyone
 
-[Twenty One/Blackjack][twenty-one-wiki] powered by [sinatra][sinatra-site].
+[Twenty One/Blackjack][blackjack-wiki] powered by [sinatra][sinatra-site].
 
 This is a very simple sinatra application where you can play Twenty One against a computer.
 
