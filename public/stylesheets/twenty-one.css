@@ -92,7 +92,7 @@ h1 {
     font-size: 3em;
     color: #ff7f90;
     text-align: center;
-    margin-top: 0px;
+    margin: 0px;
 }
 
 .center-child {
@@ -118,5 +118,5 @@ h1 {
 }
 
 #main-image {
-    margin: 2em;
+    margin: 1em;
 }
