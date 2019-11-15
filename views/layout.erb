@@ -4,11 +4,30 @@
 
   <head>
     <link href="/stylesheets/twenty-one.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/fonts.css" rel="stylesheet" type="text/css">
     <title>TwentyOne | A Simple App</title>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <% if session[:flash] %>
+      <div class="flash <%= session[:flash][:type] %>">
+	<%= session.delete(:flash)[:message] %>
+      </div>
+      <% end %>
+    </header>
+
+    <main class="center-child">
+      <%= yield %>
+    </main>
+
+    <footer class="flex evenly">
+      <a class="center-vertical" href="https://github.com/johnisom"><img width="50px" src="/images/github.png"></a>
+      <div class="center-vertical">
+	By John Isom
+	<span class="copy">&copy; 2019 </span>
+      </div>
+    </footer>
   </body>
 
 </html>
