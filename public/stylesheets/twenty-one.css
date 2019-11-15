@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+}
+
+header,
+footer {
+    position: absolute;
+    height: 74px;
+    left: 0px;
+    right: 0px;
+}
+
+header {
+    top: 0px;
+}
+
+footer {
+    bottom: 0px;
+    background-color: #00f5;
+}
+
+main {
+    position: absolute;
+    top: 74px;
+    bottom: 74px;
+    left: 0px;
+    right: 0px;
+}
+
+.flash {
+    text-align: center;
+    font-size: 26px;
+    height: inherit;
+    padding: 24px;
+}
+
+.success {
+    background-color: #0f05;
+}
+
+.danger {
+    background-color: #f005;
+}
+
+.neutral {
+    background-color: #00f5;
+}
+
+.center-vertical {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.center-horizontal {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.copy {
+    color: #e31b6d;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.fill {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.evenly {
+    justify-content: space-evenly;
+}
+
+.evenly-vertical {
+    align-content: space-evenly;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 3em;
+    color: #ff7f90;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.center-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 0.7em;
+    font-weight: 500;
+    font-size: 1.5em;
+    background-color: #ddd;
+}
+
+.no-decorate {
+    text-decoration: none;
+}
+
+.purple {
+    color: purple;
+    background-color: #d6f5;
+}
+
+#main-image {
+    margin: 2em;
+}
