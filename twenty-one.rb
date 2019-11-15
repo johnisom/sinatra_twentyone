@@ -5,5 +5,9 @@ require 'sinatra/reloader' if development?
 require 'tilt/erubis'
 
 get '/' do
-  'Welcome to twenty-one'
+  erb :index
+end
+
+get '/play' do
+  erb :play
 end
