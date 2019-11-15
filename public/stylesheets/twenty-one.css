@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-body {
+body * {
     font-family: Montserrat, sans-serif;
     font-weight: 300;
 }
@@ -63,6 +63,7 @@ main {
 
 .copy {
     color: #e31b6d;
+    font-weight: 500;
 }
 
 .flex {
@@ -74,9 +75,8 @@ main {
     flex-direction: column;
 }
 
-.fill {
-    margin-top: auto;
-    margin-bottom: auto;
+.between {
+    justify-content: space-between;
 }
 
 .evenly {
@@ -103,13 +103,36 @@ h1 {
 
 .button {
     padding: 0.7em;
-    font-weight: 500;
-    font-size: 1.5em;
+    font-size: 2em;
     background-color: #ddd;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
-.no-decorate {
-    text-decoration: none;
+.button:hover {
+    filter: brightness(75%);
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button-holder {
+    width: 70%;
+    height: 50%;
+}
+
+.action {
+    width: 70%;
+    height: 50%;
+}
+
+.hit,
+.stay {
+    width: 70%;
+    height: 50%;
+    text-align: center;
 }
 
 .purple {
@@ -117,6 +140,44 @@ h1 {
     background-color: #d6f5;
 }
 
+.green {
+    color: green;
+    background-color: #2f95;
+}
+
+.red {
+    color: red;
+    background-color: #f625;
+}
+
 #main-image {
     margin: 1em;
+}
+
+.grid {
+    display: grid;
+}
+
+#game {
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 600px 200px;
+    column-gap: 100px;
+    row-gap: 25px;
+}
+
+.cards {
+    width: 600px;
+    height: 200px;
+    align-items: center;
+}
+
+h3 {
+    margin: 0px;
+    padding: 5px;
+    font-weight: 500;
+}
+
+.score {
+    margin: 0px;
+    align-self: center;
 }

@@ -1,0 +1,32 @@
+<div class="grid" id="game">
+  <div class="flex-vertical">
+    <div class="flex between">
+      <h3>Dealer's cards</h3>
+      <p class="hand-value">Your hand value: <%= @computer_hand_value %></p>
+      <p class="score">Dealer's score:<%= @computer_score %></p>
+    </div>
+    <div  class="cards flex">
+      <% each_dealer_card do |value, suite| %>
+      <img width="100px" src="/images/cards/<%= value %><%= suite %>.png">
+      <% end %>
+    </div>
+  </div>
+  <form class="center-child" action="/hit" method="POST">
+    <button class="button red action">Hit!</button>
+  </form>
+  <div class="flex-vertical">
+    <div class="flex between">
+      <h3>Your cards</h3>
+      <p class="hand-value">Your hand value: <%= @human_hand_value %></p>
+      <p class="score">Your score: <%= @human_score %></p>
+    </div>
+    <div class="cards flex">
+      <% each_player_card do |value, suite| %>
+      <img width="100px" src="/images/cards/<%= value %><%= suite %>.png">
+      <% end %>
+    </div>
+  </div>
+  <form class="center-child" action="/stay" method="POST">
+    <button class="button green action">Stay!</button>
+  </form>
+</div>
