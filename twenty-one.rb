@@ -8,7 +8,7 @@ require_relative 'lib/game.rb'
 
 configure do
   enable :sessions
-  set :session_secret, 'secret'
+  set :session_secret, development? ? 'secret' : SecureRandom.hex(64)
 end
 
 helpers do
