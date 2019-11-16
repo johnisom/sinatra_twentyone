@@ -10,6 +10,7 @@
   </head>
 
   <body>
+
     <header>
       <% if session[:flash] %>
       <div class="flash <%= session[:flash][:type] %>">
@@ -23,12 +24,18 @@
     </main>
 
     <footer class="flex evenly">
-      <a class="center-vertical" href="https://github.com/johnisom"><img width="50px" src="/images/github.png"></a>
+
+      <a class="center-vertical" href="https://github.com/johnisom/sinatra_twentyone">
+	<img width="50px" src="/images/github.png">
+      </a>
+
       <div class="center-vertical">
 	John Isom
 	<span class="copy">&copy; 2019</span>
       </div>
+
     </footer>
+
   </body>
 
 </html>

@@ -79,10 +79,6 @@ main {
     justify-content: space-between;
 }
 
-.between-vertical {
-    justify-items: space-between;
-}
-
 .evenly {
     justify-content: space-evenly;
 }

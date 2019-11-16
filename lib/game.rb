@@ -11,7 +11,7 @@ class Game
 
   attr_reader :player, :dealer
   attr_accessor :game_over
-  
+
   def initialize
     @player = Player.new
     @dealer = Dealer.new

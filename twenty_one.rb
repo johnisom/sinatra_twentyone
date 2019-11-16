@@ -51,7 +51,7 @@ def initialize_game
 end
 
 def handle_end_of_round
-  if @game.player_bust?
+  if @gamep.player_bust?
     flash('Oops! You busted! Dealer wins!', :danger)
     @dealer.increment_score
     @game.game_over = true
@@ -66,11 +66,11 @@ def handle_end_of_round
       @player.increment_score
       @game.game_over = true
     when :dealer
-      flash("The dealer won this round. But I believe in you!", :danger)
+      flash('The dealer won this round. But I believe in you!', :danger)
       @dealer.increment_score
       @game.game_over = true
     when :neither
-      flash("It was a tie. Better luck next time!")
+      flash('It was a tie. Better luck next time!')
       @game.game_over = true
     end
   end
@@ -99,11 +99,11 @@ def next_round
 end
 
 def reset
-  flash("Game has been reset!", :success)
+  flash('Game has been reset!', :success)
   @game.total_reset
 end
 
-def flash(message, type=:neutral)
+def flash(message, type = :neutral)
   session[:flash] = { message: message, type: type }
 end
 
