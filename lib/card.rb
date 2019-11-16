@@ -8,7 +8,11 @@ class Card
   end
 
   def to_s
-    @rank + @suit
+    @rank.to_s + @suit
+  end
+
+  def to_a
+    [@rank, @suit]
   end
 
   def value

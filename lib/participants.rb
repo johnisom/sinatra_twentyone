@@ -2,10 +2,11 @@
 
 # Base participant class
 class Participant
-  attr_reader :hand
+  attr_reader :hand, :score
 
   def initialize
     @hand = []
+    @score = 0
   end
 
   def busted?(max_limit)
@@ -18,6 +19,14 @@ class Participant
 
   def clear_hand
     @hand.clear
+  end
+
+  def clear_score
+    @score = 0
+  end
+
+  def increment_score
+    @score += 1
   end
 end
 

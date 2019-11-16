@@ -79,6 +79,10 @@ main {
     justify-content: space-between;
 }
 
+.between-vertical {
+    justify-items: space-between;
+}
+
 .evenly {
     justify-content: space-evenly;
 }
@@ -118,13 +122,8 @@ h1 {
     outline: 0;
 }
 
-.button-holder {
-    width: 70%;
-    height: 50%;
-}
-
 .action {
-    width: 70%;
+    width: 90%;
     height: 50%;
 }
 
@@ -145,6 +144,11 @@ h1 {
     background-color: #2f95;
 }
 
+.blue {
+    color: blue;
+    background-color: #43f3;
+}
+
 .red {
     color: red;
     background-color: #f625;
@@ -160,8 +164,8 @@ h1 {
 
 #game {
     grid-template-rows: 200px 200px;
-    grid-template-columns: 600px 200px;
-    column-gap: 100px;
+    grid-template-columns: 600px 150px;
+    column-gap: 25px;
     row-gap: 25px;
 }
 
@@ -180,4 +184,16 @@ h3 {
 .score {
     margin: 0px;
     align-self: center;
+}
+
+.reset {
+    height: 325px;
+}
+
+.big-button {
+    width: 175px;
+}
+
+.reset-bar {
+    height: 300px;
 }

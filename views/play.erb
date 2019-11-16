@@ -1,32 +1,56 @@
-<div class="grid" id="game">
-  <div class="flex-vertical">
-    <div class="flex between">
-      <h3>Dealer's cards</h3>
-      <p class="hand-value">Your hand value: <%= @computer_hand_value %></p>
-      <p class="score">Dealer's score:<%= @computer_score %></p>
+<div class="flex between">
+
+  <div class="grid" id="game">
+
+    <div class="flex-vertical">
+
+      <div class="flex between">
+	<h3>Dealer's cards</h3>
+	<p class="hand-value">Dealer's hand value: <%= end_of_game? ? @dealer_hand_value : '?' %></p>
+	<p class="score">Dealer's score: <%= @dealer_score %></p>
+      </div>
+
+      <div  class="cards flex">
+	<% each_dealer_card_image_path do |path| %>
+	<img width="100px" src="<%= path %>">
+	<% end %>
+      </div>
+
     </div>
-    <div  class="cards flex">
-      <% each_dealer_card do |value, suite| %>
-      <img width="100px" src="/images/cards/<%= value %><%= suite %>.png">
-      <% end %>
+
+    <form class="center-child" action="/hit" method="POST">
+      <button class="button blue action">Hit!</button>
+    </form>
+
+    <div class="flex-vertical">
+
+      <div class="flex between">
+	<h3>Your cards</h3>
+	<p class="hand-value">Your hand value: <%= @player_hand_value %></p>
+	<p class="score">Your score: <%= @player_score %></p>
+      </div>
+
+      <div class="cards flex">
+	<% each_player_card_image_path do |path| %>
+	<img width="100px" src="<%= path %>">
+	<% end %>
+      </div>
+
     </div>
+
+    <form class="center-child" action="/stay" method="POST">
+      <button class="button green action">Stay!</button>
+    </form>
+
   </div>
-  <form class="center-child" action="/hit" method="POST">
-    <button class="button red action">Hit!</button>
+
+  <% if end_of_game? %>
+  <form class="center-child big-button" action="/next_round" method="POST">
+    <button class="button purple action reset">Next round!</button>
   </form>
-  <div class="flex-vertical">
-    <div class="flex between">
-      <h3>Your cards</h3>
-      <p class="hand-value">Your hand value: <%= @human_hand_value %></p>
-      <p class="score">Your score: <%= @human_score %></p>
-    </div>
-    <div class="cards flex">
-      <% each_player_card do |value, suite| %>
-      <img width="100px" src="/images/cards/<%= value %><%= suite %>.png">
-      <% end %>
-    </div>
-  </div>
-  <form class="center-child" action="/stay" method="POST">
-    <button class="button green action">Stay!</button>
+  <% end %>
+
+  <form class="center-child big-button" action="/reset">
+    <button class="button red action reset">Total Reset</button>
   </form>
 </div>
