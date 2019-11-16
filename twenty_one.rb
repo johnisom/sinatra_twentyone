@@ -51,7 +51,7 @@ def initialize_game
 end
 
 def handle_end_of_round
-  if @gamep.player_bust?
+  if @game.player_bust?
     flash('Oops! You busted! Dealer wins!', :danger)
     @dealer.increment_score
     @game.game_over = true
