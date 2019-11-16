@@ -1,4 +1,4 @@
 # frozen_string_literal: true
 
-require './twenty-one'
+require './twenty_one'
 run Sinatra::Application
