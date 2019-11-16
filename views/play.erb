@@ -6,7 +6,7 @@
 
       <div class="flex between">
 	<h3>Dealer's cards</h3>
-	<p class="hand-value">Dealer's hand value: <%= end_of_game? ? @dealer_hand_value : '?' %></p>
+	<p>Dealer's hand value: <%= end_of_game? ? @dealer_hand_value : '?' %></p>
 	<p class="score">Dealer's score: <%= @dealer_score %></p>
       </div>
 
@@ -26,7 +26,7 @@
 
       <div class="flex between">
 	<h3>Your cards</h3>
-	<p class="hand-value">Your hand value: <%= @player_hand_value %></p>
+	<p>Your hand value: <%= @player_hand_value %></p>
 	<p class="score">Your score: <%= @player_score %></p>
       </div>
 

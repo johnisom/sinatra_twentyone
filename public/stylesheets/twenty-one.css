@@ -123,13 +123,6 @@ h1 {
     height: 50%;
 }
 
-.hit,
-.stay {
-    width: 70%;
-    height: 50%;
-    text-align: center;
-}
-
 .purple {
     color: purple;
     background-color: #d6f5;
@@ -175,11 +168,6 @@ h3 {
     margin: 0px;
     padding: 5px;
     font-weight: 500;
-}
-
-.score {
-    margin: 0px;
-    align-self: center;
 }
 
 .reset {
