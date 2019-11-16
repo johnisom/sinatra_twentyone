@@ -50,30 +50,36 @@ def initialize_game
   session[:game] = Game.new
 end
 
-def handle_end_of_round
+def handle_bust
   if @game.player_bust?
     flash('Oops! You busted! Dealer wins!', :danger)
     @dealer.increment_score
-    @game.game_over = true
   elsif @game.dealer_bust?
     flash('Woo! The dealer busted. You win!', :success)
     @player.increment_score
-    @game.game_over = true
-  else
-    case @game.winner
-    when :player
-      flash("You won! Show that dealer who's boss!", :success)
-      @player.increment_score
-      @game.game_over = true
-    when :dealer
-      flash('The dealer won this round. But I believe in you!', :danger)
-      @dealer.increment_score
-      @game.game_over = true
-    when :neither
-      flash('It was a tie. Better luck next time!')
-      @game.game_over = true
-    end
   end
+end
+
+def handle_winner
+  case @game.winner
+  when :player
+    flash("You won! Show that dealer who's boss!", :success)
+    @player.increment_score
+  when :dealer
+    flash('The dealer won this round. But I believe in you!', :danger)
+    @dealer.increment_score
+  when :neither
+    flash('It was a tie. Better luck next time!')
+  end
+end
+
+def handle_end_of_round
+  if @game.player_bust? || @game.dealer_bust?
+    handle_bust
+  else
+    handle_winner
+  end
+  @game.game_over = true
 end
 
 def hit
