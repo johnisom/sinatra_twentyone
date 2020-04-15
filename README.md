@@ -15,6 +15,15 @@ event handling.
   <img alt="Screencast of app" src="example.gif">
 </p>
 
+## Installation ##
+
+1. Clone this repository (`git clone https://github.com/johnisom/sinatra_twentyone`)
+2. `cd` into this repository (`cd sinatra_twentyone`)
+3. Install dependencies (`bundle install`)
+   - If you don’t have ruby-2.6.5, install it
+4. Run the server locally (`bundle exec rackup`)
+5. Enjoy playing Twenty-One at http://localhost:9292/
+
 [blackjack-wiki]: https://en.wikipedia.org/wiki/Blackjack
 [sinatra-site]: http://sinatrarb.com/
 [herokuapp]: https://just-a-twenty-one-app.herokuapp.com/
