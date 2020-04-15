@@ -1,10 +1,15 @@
-# sinatra_twentyone
+# Twenty One #
 
-[Twenty One/Blackjack][blackjack-wiki] powered by [sinatra][sinatra-site].
+[Twenty One/Blackjack][blackjack-wiki] powered by Ruby and the
+[Sinatra][sinatra-site] framework. You play as the participant and the
+computer plays as the dealer. It is hosted live on Heroku at [this
+link][herokuapp].
 
-This is a very simple sinatra application where you can play Twenty One against a computer. Because of the very simple nature of this app, this README is going to be pretty sparse.
+## Example Usage ##
 
-The app can be found [here][herokuapp] on Heroku.
+<p align="center">
+  <img alt="Screencast of app" src="example.gif">
+</p>
 
 [blackjack-wiki]: https://en.wikipedia.org/wiki/Blackjack
 [sinatra-site]: http://sinatrarb.com/
